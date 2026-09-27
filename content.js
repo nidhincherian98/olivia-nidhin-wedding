@@ -11,7 +11,7 @@ window.INVITATION = {
   youtubeId: 'aVLxadVNGxQ',
   audioUrl: '/olivia-nidhin-wedding/wedding-piano.mp3', // Uploaded piano track, shared by both invitations.
   photoUrls: [], // Add the supplied couple photos here; no stock couple photos are used.
-  rsvpEndpoint: '', // Google Apps Script web-app URL, after account setup.
+  rsvpEndpoint: 'https://script.google.com/macros/s/AKfycbxXOotNyv-E6azBa7Eq3yzD0vTvqXw-N0594ovDKOvwvw9uGCEz-xPHGqVKfyE1Q7zJ/exec', // Routes each invitation to its own private guest list.
   families: {
     olivia: {
       compliments: 'Christin Haan Shaji',
