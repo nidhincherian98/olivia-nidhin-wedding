@@ -9,9 +9,9 @@
 <style id="swipe-hint-style">
 .hero{min-height:100svh}
 .hero .hero-date{padding-bottom:0}
-.hero .scroll-cue{gap:7px;padding:7px 16px 3px;color:#59664d;animation:none;flex-shrink:0}
-.hero .scroll-cue span{height:auto;width:auto;background:rgba(246,242,233,.88);border-radius:16px;padding:2px 9px;font:500 10px/1.5 var(--sans);letter-spacing:.2em;text-transform:uppercase}
-.hero .scroll-cue svg{animation:float 2.6s ease-in-out infinite;flex-shrink:0}
+.hero .scroll-cue{gap:7px;padding:7px 16px 3px;color:#35412c;animation:none;flex-shrink:0}
+.hero .scroll-cue span{height:auto;width:auto;background:rgba(246,242,233,.88);border-radius:16px;padding:2px 9px;font:600 11px/1.5 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.hero .scroll-cue svg{stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;animation:float 2.6s ease-in-out infinite;flex-shrink:0}
 @media(max-height:720px){.hero{padding-top:64px}.hero-inner{min-height:calc(100svh - 89px);gap:18px}.hero .verse{padding-top:8px}.hero-names>.eyebrow{margin-bottom:14px}}
 </style>
 </head>
@@ -31,7 +31,7 @@
     <div class="verse"><p data-text="verse"></p><span class="eyebrow" data-text="verseReference"></span></div>
     <div class="hero-names"><p class="eyebrow">THE WEDDING OF</p><h1 tabindex="-1" id="wedding-title"><span data-text="groomShort"></span><em>&amp;</em><span data-text="brideShort"></span></h1></div>
     <div class="hero-date"><span class="tiny-rule"></span><p data-text="shortDate"></p></div>
-    <a class="scroll-cue" href="#invited" aria-label="Scroll to the invitation"><span>Swipe down</span><svg width="16" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true"><path d="M8 1v16m-5-5 5 5 5-5" stroke="currentColor"/></svg></a>
+    <a class="scroll-cue" href="#invited" aria-label="Scroll to the invitation"><span>Scroll down</span><svg width="16" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true"><path d="M8 1v16m-5-5 5 5 5-5" stroke="currentColor"/></svg></a>
   </div>
 </section>
 <section id="invited" class="invited section-pad reveal">
