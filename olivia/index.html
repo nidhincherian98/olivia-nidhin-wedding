@@ -18,7 +18,7 @@
 // Personal wording for Olivia's invitation only.
 document.addEventListener('DOMContentLoaded', () => {
   const family = window.INVITATION.families.olivia;
-  family.parents = family.parents.replace(/SHAJI KANANTHEKATTIL BABY/gi, 'SHAJI K. BABY').replace(/ AND /gi, ' & ');
+  family.parents = 'MR SHAJI K. BABY & MRS LINY SHAJI';
   family.relation = family.relation.replace(/SUSAN CHERIAN/gi, 'SUSAN V. THOMAS').replace(/ AND /gi, ' & ').replace(/S\/O/g, 'S/o');
   document.querySelectorAll('[data-family]').forEach(el => {
     el.textContent = family[el.dataset.family] || '';
