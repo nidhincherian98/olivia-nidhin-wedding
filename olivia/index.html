@@ -14,6 +14,20 @@
 .hero .scroll-cue svg{stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;animation:float 2.6s ease-in-out infinite;flex-shrink:0}
 @media(max-height:720px){.hero{padding-top:64px}.hero-inner{min-height:calc(100svh - 89px);gap:18px}.hero .verse{padding-top:8px}.hero-names>.eyebrow{margin-bottom:14px}}
 </style>
+<script id="olivia-wording">
+// Personal wording for Olivia's invitation only.
+document.addEventListener('DOMContentLoaded', () => {
+  const family = window.INVITATION.families.olivia;
+  family.parents = family.parents.replace(/SHAJI KANANTHEKATTIL BABY/gi, 'SHAJI K. BABY').replace(/ AND /gi, ' & ');
+  family.relation = family.relation.replace(/SUSAN CHERIAN/gi, 'SUSAN V. THOMAS').replace(/ AND /gi, ' & ').replace(/S\/O/g, 'S/o');
+  document.querySelectorAll('[data-family]').forEach(el => {
+    el.textContent = family[el.dataset.family] || '';
+  });
+  document.querySelector('[data-family="relation"]').style.textTransform = 'none';
+  window.INVITATION.reception = 'Reception to follow at Dr. Alexander Mar Thoma Valiya Metropolitan Smaraka Auditorium';
+  document.querySelector('[data-text="reception"]').textContent = window.INVITATION.reception;
+});
+</script>
 </head>
 <body data-side="olivia" class="sealed">
 <div id="cover" class="cover">
@@ -50,8 +64,9 @@
 <section id="rsvp" class="rsvp section-pad reveal"><div class="rsvp-inner"><span class="section-number">RSVP</span><h2 data-text="rsvpTitle"></h2>
 <form id="rsvp-form"><div class="field"><label for="full-name">Full name</label><input id="full-name" name="fullName" type="text" autocomplete="name" required minlength="2" maxlength="100" placeholder="Your full name"></div><div class="field"><label for="guests">Number of guests</label><div class="participant-stepper"><button type="button" id="remove-participant" aria-label="Remove one guest" disabled>−</button><div class="participant-value"><input id="guests" name="guests" type="number" inputmode="numeric" min="1" max="50" step="1" value="1" required></div><button type="button" id="add-participant" aria-label="Add one guest">+</button></div></div><div class="honeypot" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div><button class="submit" type="submit">Send RSVP <span aria-hidden="true">↗</span></button><p id="rsvp-status" class="form-status" role="status" aria-live="polite"></p></form>
 </div></section>
-<footer><div class="footer-mark" aria-hidden="true">O<span> & </span>N</div><p>With best compliments from</p><p class="compliments" data-family="compliments"></p><span class="footer-date" data-text="shortDate"></span></footer>
+<footer><div class="footer-mark" aria-hidden="true">O<span> & </span>N</div><p>With best compliments from</p><p class="compliments" data-family="compliments"></p></footer>
 </main>
 <div class="music-wrap" hidden id="music-wrap"><div id="music-panel" hidden><div class="music-panel-header"><span>Our wedding soundtrack</span><button id="close-music" aria-label="Close and pause music">×</button></div><div id="youtube-player"></div><a id="youtube-link" target="_blank" rel="noopener noreferrer">Listen on YouTube ↗</a></div><button id="music-button" class="music-button" aria-label="Play wedding music" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18V5l11-2v13M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2.5"/><ellipse cx="17" cy="16" rx="3" ry="2.5"/></svg><span>Music</span></button></div>
 <noscript><style>.cover{display:none}body.sealed{overflow:auto}main{visibility:visible}.reveal{opacity:1;transform:none}</style><p class="noscript">Please enable JavaScript to view the personalised invitation and RSVP.</p></noscript>
 </body></html>
+
